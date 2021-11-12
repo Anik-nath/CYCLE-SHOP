@@ -15,8 +15,10 @@ const useFirebase = () => {
   const googleSignIn = (location,history) => {
     signInWithPopup(auth, provider)
       .then((result) => {
+        const user = result.user;
         setError('');
         alert("Successfuly sign in")
+        saveUser(user.email, user.displayName, 'PUT')
         const destination = location?.state?.from || '/';
         history.replace(destination);
       })
@@ -51,6 +53,8 @@ const useFirebase = () => {
       setError('');
       const newUser = {email,displayName : name}
       setUser(newUser);
+      //save user
+      saveUser(email,name,'POST');
       alert('create new user')
     })
     .catch((error) => {
@@ -73,6 +77,19 @@ const useFirebase = () => {
     })
   }
   
+  const saveUser =(email,displayName,method)=>{
+    const user = {email,displayName};
+    fetch('http://localhost:5000/users',{
+      method :method,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user) 
+    })
+    .then()
+
+
+  }
   return {
     user,
     googleSignIn,

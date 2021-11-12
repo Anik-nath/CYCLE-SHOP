@@ -11,7 +11,7 @@ const Register = () => {
   const handleField =(e)=>{
     const field = e.target.name;
     const value = e.target.value;
-    // console.log(value);
+    console.log(value);
     const newField = {...data};
 
     newField[field] = value;
@@ -20,7 +20,7 @@ const Register = () => {
   }
 
   const handleSubmit =(e)=>{
-    createUser(data.email, data.password);
+    createUser(data.email, data.password, data.name);
     e.preventDefault();
   }
 
@@ -33,15 +33,17 @@ const Register = () => {
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="username"
+                htmlFor="name"
               >
-                Username
+                fullname
               </label>
               <input
                 className="text-lg shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
+                id="name"
                 type="text"
-                placeholder="Username"
+                placeholder="name"
+                name="name"
+                onBlur={handleField}
               />
             </div>
             <div className="mb-4">

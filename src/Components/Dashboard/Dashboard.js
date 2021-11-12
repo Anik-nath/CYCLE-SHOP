@@ -1,16 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-import GivenReview from "./GivenReview/GivenReview";
-import MakeAdmin from "./MakeAdmin/MakeAdmin";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+
 
 const Dashboard = () => {
     const {logout,user} = useAuth();
+    let { path, url } = useRouteMatch();
+    
   return (
     <div className="pt-24" id="dashboard">
-      <div className="grid grid-cols-4">
-        <div>
-        <div className="mobile-menu text-center h-screen bg-gray-50">
+      <div className="grid grid-cols-4 gap-4">
+          <div className="mobile-menu text-center h-screen bg-gray-50">
             <div className="py-10 flex flex-col items-center">
                 {
                     user?.photoURL ? <img className="h-10 w-10 border-2 rounded-full mr-2" src={user.photoURL} alt="" /> :   <i className="fas fa-user text-2xl text-green-500"></i>
@@ -19,28 +26,28 @@ const Dashboard = () => {
                 </div>
             <ul className="">
               <li>
-                <a
-                  href="#makeAdmin"
+                <Link
+                  to={`${url}/makeAdmin`}
                   className="block text-sm border px-2 py-4 hover:bg-green-500 transition duration-300"
                 >
                   Make Admin
-                </a>
-              </li>
-              <li>
-                <Link
-                  to="/dashboard/orderList"
-                  className="block text-sm border px-2 py-4 hover:bg-green-500 transition duration-300"
-                >
-                  Order List
                 </Link>
               </li>
               <li>
-                <a
-                  href="#review"
+                <Link
+                  to={`${url}`}
+                  className="block text-sm border px-2 py-4 hover:bg-green-500 transition duration-300"
+                >
+                 Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/givenReview`}
                   className="block text-sm border px-2 py-4 hover:bg-green-500 transition duration-300"
                 >
                   Review
-                </a>
+                </Link>
               </li>
 		          <li>
              <button onClick={logout}
@@ -51,11 +58,9 @@ const Dashboard = () => {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="col-span-3">
-          <MakeAdmin></MakeAdmin>
+        <div className="">
+       
           
-          <GivenReview></GivenReview>
         </div>
       </div>
     </div>
