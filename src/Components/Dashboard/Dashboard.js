@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import GivenReview from "./GivenReview/GivenReview";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
-import OrderList from "./OrderList/OrderList";
 
 const Dashboard = () => {
     const {logout,user} = useAuth();
@@ -27,12 +27,12 @@ const Dashboard = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#orderList"
+                <Link
+                  to="/dashboard/orderList"
                   className="block text-sm border px-2 py-4 hover:bg-green-500 transition duration-300"
                 >
                   Order List
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -53,9 +53,8 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col-span-3">
-         
-            <MakeAdmin></MakeAdmin>
-           <OrderList></OrderList>
+          <MakeAdmin></MakeAdmin>
+          
           <GivenReview></GivenReview>
         </div>
       </div>

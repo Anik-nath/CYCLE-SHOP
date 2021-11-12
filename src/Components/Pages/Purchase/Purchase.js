@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { useParams } from "react-router";
+import useAuth from "../../Hooks/useAuth";
 
 const Purchase = () => {
   const { cycleId } = useParams();
   const [details, setDetails] = useState([]);
-  console.log(details);
+  const [data,setData] = useState({});
+  const {user} = useAuth();
 
   useEffect(() => {
     const url = `http://localhost:5000/cycles/${cycleId}`;
@@ -13,6 +15,45 @@ const Purchase = () => {
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
+
+
+  const handleField =(e)=>{
+    const field = e.target.name;
+    const value = e.target.value;
+    // console.log(value);
+    const newField = {...data};
+    newField[field] = value;
+    setData(newField);
+  }
+
+  const handleOrder =(e)=>{
+    alert("ordered")
+    const order = {
+        ...data,
+        name : data?.firstname,
+        cycleName : details?.name,
+        address : data?.address,
+        phone: data?.phone,
+        date: new Date().toLocaleDateString()
+    }
+    fetch('http://localhost:5000/orders',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(order)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.insertedId){
+            alert("accept your order")
+        }
+    })
+
+    e.preventDefault();
+    }
+
+
 
   return (
     <div className="pt-24">
@@ -44,7 +85,7 @@ const Purchase = () => {
               className="border border-green-500 mt-4 hover:bg-green-500 hover:text-white p-2 px-4 rounded"
               type="button"
             >
-              <i class="fas fa-shopping-cart"></i> Add To Cart
+              <i className="fas fa-shopping-cart"></i> Add To Cart
             </button>
           </div>
         </div>
@@ -58,6 +99,7 @@ const Purchase = () => {
                   id="firstname"
                   type="text"
                   name="firstname"
+                    onBlur={handleField}
                   placeholder="firstname"
                 />
               </div>
@@ -67,6 +109,7 @@ const Purchase = () => {
                   id="lastname"
                   type="text"
                   name="lastname"
+                onBlur={handleField}
                   placeholder="lastname"
                 />
               </div>
@@ -77,7 +120,8 @@ const Purchase = () => {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="email"
+                  onBlur={handleField}
+                defaultValue={user.email}
               />
             </div>
             <div className="mb-4">
@@ -86,6 +130,7 @@ const Purchase = () => {
                 id="phone"
                 type="text"
                 name="phone"
+                  onBlur={handleField}
                 placeholder="phone"
               />
             </div>
@@ -96,6 +141,7 @@ const Purchase = () => {
                 id="address"
                 type="text"
                 name="address"
+                  onBlur={handleField}
                 placeholder="address"
               />
             </div>
@@ -105,14 +151,15 @@ const Purchase = () => {
                 id="city"
                 type="text"
                 name="city"
+                  onBlur={handleField}
                 placeholder="city/town"
               />
             </div>
-            <button
+            <button onClick={handleOrder}
               className="border border-green-500 mt-4 hover:bg-green-500 hover:text-white p-2 px-4 rounded"
               type="button"
             >
-              <i class="fas fa-shopping-basket"></i> Place Order
+              <i className="fas fa-shopping-basket"></i> Place Order
             </button>
           </form>
         </div>

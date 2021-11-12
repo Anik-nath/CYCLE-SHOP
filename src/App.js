@@ -39,8 +39,8 @@ function App() {
           <Route path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
           </Route>
-          <Route path="/orderList">
-            <OrderList></OrderList>
+          <Route path="/dashboard/orderList">
+          <OrderList></OrderList>
           </Route>
           <Route path="/givenReview">
             <GivenReview></GivenReview>
