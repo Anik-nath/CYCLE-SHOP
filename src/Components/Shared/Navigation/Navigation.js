@@ -62,6 +62,16 @@ const Navigation = () => {
                 >
                  Reviews
                 </NavLink>
+                <NavLink
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red",
+                  }}
+                  to="/dashboard"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                >
+                 Dashboard
+                </NavLink>
               </div>
             </div>
 

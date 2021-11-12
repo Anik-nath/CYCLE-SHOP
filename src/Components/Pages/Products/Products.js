@@ -5,7 +5,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:5000/cycles")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -18,7 +18,7 @@ const Products = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
           {products.map((products) => (
-            <OurCard products={products} key={products.id}>
+            <OurCard products={products} key={products._id}>
               {products.name}
             </OurCard>
           ))}

@@ -7,7 +7,7 @@ const BestProduts = () => {
   const [isloading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("http://localhost:5000/cycles")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
