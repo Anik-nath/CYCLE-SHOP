@@ -8,7 +8,7 @@ const About = () => {
       <h2 className="text-center text-3xl font-semibold py-8 uppercase">
         <span className="text-green-500">About</span> Us
       </h2>
-      <div className="grid grid-cols-2 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         <div>
           <img className="w-full" src={image} alt="" />
         </div>

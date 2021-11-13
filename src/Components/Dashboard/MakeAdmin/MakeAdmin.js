@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState("");
-  const [success,setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
       const user = {email}; 
@@ -19,11 +19,10 @@ const MakeAdmin = () => {
       if(data.modifiedCount){
         setSuccess(true);
       }
-    });
-    
+    })
     e.preventDefault();
   };
-  const handleOnBlur =e=>{
+  const handleOnBlur =(e)=>{
       setEmail(e.target.value);
   }
     return (
@@ -41,6 +40,9 @@ const MakeAdmin = () => {
                 />
                 <button type="submit" className="bg-green-500 rounded ml-2 hover:bg-green-700 text-white font-bold py-2 px-8 focus:outline-none focus:shadow-outline">Make Admin</button>
                </form>
+               {
+                 success && <p>Admin maded succssfully</p>
+               }
             </div>
         </div>
     );

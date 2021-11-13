@@ -6,54 +6,49 @@ import useAuth from "../../Hooks/useAuth";
 const Purchase = () => {
   const { cycleId } = useParams();
   const [details, setDetails] = useState([]);
-  const [data,setData] = useState({});
-  const {user} = useAuth();
+  const [data, setData] = useState({});
+  const { user } = useAuth();
 
   useEffect(() => {
-    const url = `http://localhost:5000/cycles/${cycleId}`;
+    const url = `https://blooming-dawn-18027.herokuapp.com/cycles/${cycleId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, [cycleId]);
 
-
-  const handleField =(e)=>{
+  const handleField = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    // console.log(value);
-    const newField = {...data};
+    const newField = { ...data };
     newField[field] = value;
     setData(newField);
-  }
+  };
 
-  const handleOrder =(e)=>{
-    alert("ordered")
+  const handleOrder = (e) => {
     const order = {
-        ...data,
-        name : data?.firstname,
-        cycleName : details?.name,
-        address : data?.address,
-        phone: data?.phone,
-        date: new Date().toLocaleDateString()
-    }
-    fetch('http://localhost:5000/orders',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(order)
+      ...data,
+      name: data?.firstname,
+      cycleName: details?.name,
+      address: data?.address,
+      phone: data?.phone,
+      date: new Date().toLocaleDateString(),
+    };
+    fetch("https://blooming-dawn-18027.herokuapp.com/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(order),
     })
-    .then(res => res.json())
-    .then(data => {
-        if(data.insertedId){
-            alert("accept your order")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("accept your order");
         }
-    })
+      });
 
     e.preventDefault();
-    }
-
-
+  };
 
   return (
     <div className="pt-24">
@@ -99,7 +94,7 @@ const Purchase = () => {
                   id="firstname"
                   type="text"
                   name="firstname"
-                    onBlur={handleField}
+                  onBlur={handleField}
                   placeholder="firstname"
                 />
               </div>
@@ -109,7 +104,7 @@ const Purchase = () => {
                   id="lastname"
                   type="text"
                   name="lastname"
-                onBlur={handleField}
+                  onBlur={handleField}
                   placeholder="lastname"
                 />
               </div>
@@ -120,7 +115,7 @@ const Purchase = () => {
                 id="email"
                 type="email"
                 name="email"
-                  onBlur={handleField}
+                onBlur={handleField}
                 defaultValue={user.email}
               />
             </div>
@@ -130,7 +125,7 @@ const Purchase = () => {
                 id="phone"
                 type="text"
                 name="phone"
-                  onBlur={handleField}
+                onBlur={handleField}
                 placeholder="phone"
               />
             </div>
@@ -141,7 +136,7 @@ const Purchase = () => {
                 id="address"
                 type="text"
                 name="address"
-                  onBlur={handleField}
+                onBlur={handleField}
                 placeholder="address"
               />
             </div>
@@ -151,11 +146,12 @@ const Purchase = () => {
                 id="city"
                 type="text"
                 name="city"
-                  onBlur={handleField}
+                onBlur={handleField}
                 placeholder="city/town"
               />
             </div>
-            <button onClick={handleOrder}
+            <button
+              onClick={handleOrder}
               className="border border-green-500 mt-4 hover:bg-green-500 hover:text-white p-2 px-4 rounded"
               type="button"
             >

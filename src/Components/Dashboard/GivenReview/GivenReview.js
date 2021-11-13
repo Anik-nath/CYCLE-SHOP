@@ -23,7 +23,7 @@ const GivenReview = () => {
       feedback: data?.feedback,
     };
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://blooming-dawn-18027.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,11 +9,13 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error,setError] = useState({});
   const [admin,setAdmin] = useState(false);
+  const [isLoding,setIsLoding] = useState(true);
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   // sing in with google
   const googleSignIn = (location,history) => {
+    setIsLoding(true);
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
@@ -25,7 +27,8 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(()=> setIsLoding(false));
   };
   //sign out 
   const logout =()=>{
@@ -44,6 +47,7 @@ const useFirebase = () => {
         } else {
          setUser({});
         }
+        setIsLoding(false);
       });
       return () => unSubscribe;
   },[auth]);
@@ -58,6 +62,7 @@ const useFirebase = () => {
 
   // create user with email and password
   const createUser =(email,password,name)=>{
+    setIsLoding(true);
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       setError('');
@@ -70,10 +75,12 @@ const useFirebase = () => {
     .catch((error) => {
       setError(error.message);
       alert(error.message)
-    });
+    })
+    .finally(()=> setIsLoding(false));
   }
   // sign in with email and password
   const signInWithEmailPass =(email, password ,location,history)=>{
+    setIsLoding(true);
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         setError('');
@@ -85,11 +92,12 @@ const useFirebase = () => {
       setError(error.message);
       alert(error.message)
     })
+    .finally(()=> setIsLoding(false));
   }
   
   const saveUser =(email,displayName,method)=>{
     const user = {email,displayName};
-    fetch('http://localhost:5000/users',{
+    fetch('https://blooming-dawn-18027.herokuapp.com/users',{
       method :method,
       headers: {
         'Content-Type': 'application/json'
@@ -106,7 +114,8 @@ const useFirebase = () => {
     createUser,
     signInWithEmailPass,
     error,
-    admin
+    admin,
+    isLoding
   }
 };
 export default useFirebase;

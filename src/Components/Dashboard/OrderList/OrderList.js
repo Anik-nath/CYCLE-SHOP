@@ -7,14 +7,18 @@ const OrderList = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/?email=${user.email}`)
+    fetch(
+      `https://blooming-dawn-18027.herokuapp.com/orders/?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAllOrder(data));
   }, [user.email]);
 
   return (
     <div className="text-center pt-24">
-      <h2 className="text-2xl font-semibold pt-8 mb-4 text-green-500 uppercase">My Orders</h2>
+      <h2 className="text-2xl font-semibold pt-8 mb-4 text-green-500 uppercase">
+        My Orders
+      </h2>
 
       <div className="flex justify-center mx-16">
         <div className="flex flex-col container overflow-x-auto">
@@ -32,11 +36,17 @@ const OrderList = () => {
                     <th className="px-6 py-2 text-xs text-gray-500">Delete</th>
                   </tr>
                 </thead>
-                <tbody className="bg-white">
-                  {allOrder.map((order) => (
-                    <DataTable key={order._id} order={order}></DataTable>
-                  ))}
-                </tbody>
+                {allOrder.length === 0 ? (
+                  <div className="flex justify-center items-center">
+                    <div className="animate-spin rounded-full h-28 w-28 border-t-2 border-b-2 border-green-500"></div>
+                  </div>
+                ) : (
+                  <tbody className="bg-white">
+                    {allOrder.map((order) => (
+                      <DataTable key={order._id} order={order}></DataTable>
+                    ))}
+                  </tbody>
+                )}
               </table>
             </div>
           </div>

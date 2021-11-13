@@ -6,7 +6,7 @@ const Review = () => {
     const [review,setReviw] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/reviews")
+        fetch("https://blooming-dawn-18027.herokuapp.com/reviews")
         .then((res) => res.json())
         .then((data) => setReviw(data));
     },[])
