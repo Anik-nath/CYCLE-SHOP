@@ -24,7 +24,7 @@ const AddProduct = () => {
       details: data?.details,
     };
 
-    fetch("http://localhost:5000/cycles", {
+    fetch("https://blooming-dawn-18027.herokuapp.com/cycles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
