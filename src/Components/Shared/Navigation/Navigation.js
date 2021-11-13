@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../../images/logo.png";
+import logoIcon from "../../../images/title.png";
 import useAuth from "../../Hooks/useAuth";
 
 const Navigation = () => {
@@ -9,14 +9,14 @@ const Navigation = () => {
   return (
     <div>
       <nav className="bg-white shadow-lg fixed w-full z-10">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
                 <NavLink to="/home" className="flex items-center py-4 px-2">
-                  <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+                  <img src={logoIcon} alt="Logo" className="h-10 w-10 mr-2" />
                   <span className="font-semibold uppercase text-2xl">
-                  CycleBD
+                  CycleBD 
                   </span>
                 </NavLink>
               </div>
@@ -26,7 +26,7 @@ const Navigation = () => {
                   to="/home"
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "red",
+                  color: "#10B981"
                   }}
                   className="py-4 px-2 font-semibold "
                 >
@@ -35,7 +35,7 @@ const Navigation = () => {
                 <NavLink
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "red",
+                  color: "#10B981"
                   }}
                   to="/products"
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
@@ -45,27 +45,18 @@ const Navigation = () => {
                 <NavLink
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "red",
+                  color: "#10B981"
                   }}
                   to="/about"
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
                 >
                   About
                 </NavLink>
+            
                 <NavLink
                   activeStyle={{
                     fontWeight: "bold",
-                    color: "red",
-                  }}
-                  to="/review"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
-                >
-                 Reviews
-                </NavLink>
-                <NavLink
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "red",
+                  color: "#10B981"
                   }}
                   to="/dashboard"
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"

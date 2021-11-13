@@ -14,7 +14,7 @@ const Purchase = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data));
-  }, []);
+  }, [cycleId]);
 
 
   const handleField =(e)=>{

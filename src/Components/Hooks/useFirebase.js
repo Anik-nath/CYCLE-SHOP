@@ -8,6 +8,7 @@ initalizeFirebase();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error,setError] = useState({});
+  const [admin,setAdmin] = useState(false);
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
@@ -45,7 +46,16 @@ const useFirebase = () => {
         }
       });
       return () => unSubscribe;
-  },[auth])
+  },[auth]);
+
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/users/${user.email}`)
+    .then(res => res.json())
+    .then(data => setAdmin(data))
+  },[user.email])
+
+
   // create user with email and password
   const createUser =(email,password,name)=>{
     createUserWithEmailAndPassword(auth, email, password)
@@ -88,7 +98,6 @@ const useFirebase = () => {
     })
     .then()
 
-
   }
   return {
     user,
@@ -96,7 +105,8 @@ const useFirebase = () => {
     logout,
     createUser,
     signInWithEmailPass,
-    error
+    error,
+    admin
   }
 };
 export default useFirebase;

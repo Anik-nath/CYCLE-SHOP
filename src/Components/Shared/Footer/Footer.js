@@ -36,8 +36,8 @@ const Footer = () => {
               <span className="ml-3 text-xl text-white">CYCLE SHOP BD</span>
             </a>
             <p className="mt-2 text-sm text-gray-400">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
-              quam?
+              This is the best cycle and trusted cycle shop in your area.
+              Enjoy your ride!
             </p>
           </div>
           <div
@@ -98,7 +98,7 @@ const Footer = () => {
             mb-3
           "
               >
-                CATEGORIES
+                USEFUL LINK
               </h2>
               <nav className="list-none mb-10">
                 <li>
@@ -134,7 +134,7 @@ const Footer = () => {
             mb-3
           "
               >
-                CATEGORIES
+                DASHBOARD
               </h2>
               <nav className="list-none mb-10">
                 <li>
