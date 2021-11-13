@@ -33,6 +33,7 @@ const Purchase = () => {
       phone: data?.phone,
       date: new Date().toLocaleDateString(),
     };
+    
     fetch("https://blooming-dawn-18027.herokuapp.com/orders", {
       method: "POST",
       headers: {
@@ -46,7 +47,6 @@ const Purchase = () => {
           alert("accept your order");
         }
       });
-
     e.preventDefault();
   };
 
@@ -96,6 +96,7 @@ const Purchase = () => {
                   name="firstname"
                   onBlur={handleField}
                   placeholder="firstname"
+                  required
                 />
               </div>
               <div className="mb-4 w-1/2">
@@ -104,6 +105,7 @@ const Purchase = () => {
                   id="lastname"
                   type="text"
                   name="lastname"
+                  required
                   onBlur={handleField}
                   placeholder="lastname"
                 />
@@ -115,6 +117,7 @@ const Purchase = () => {
                 id="email"
                 type="email"
                 name="email"
+                required
                 onBlur={handleField}
                 defaultValue={user.email}
               />
@@ -125,6 +128,7 @@ const Purchase = () => {
                 id="phone"
                 type="text"
                 name="phone"
+                required
                 onBlur={handleField}
                 placeholder="phone"
               />
@@ -136,6 +140,7 @@ const Purchase = () => {
                 id="address"
                 type="text"
                 name="address"
+                required
                 onBlur={handleField}
                 placeholder="address"
               />
@@ -146,6 +151,7 @@ const Purchase = () => {
                 id="city"
                 type="text"
                 name="city"
+                required
                 onBlur={handleField}
                 placeholder="city/town"
               />

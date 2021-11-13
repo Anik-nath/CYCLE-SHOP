@@ -44,8 +44,9 @@ const Dashboard = () => {
               </Link>
             </li>
 
-            {admin && (
-              <li className="pl-12">
+            {admin && 
+              <div>
+                <li className="pl-12">
                 <Link
                   to={`${url}/makeAdmin`}
                   className="block text-sm  px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
@@ -53,7 +54,8 @@ const Dashboard = () => {
                   <i className="fas fa-user-shield"></i> Make Admin
                 </Link>
               </li>
-            )}
+              </div>
+            }
 
             <li className="pl-12">
               <Link
@@ -79,14 +81,14 @@ const Dashboard = () => {
                 <i className="fas fa-tools"></i> Manage All Orders
               </Link>
             </li>
-            <li className="pl-12">
+            {admin &&<li className="pl-12">
               <Link
                 to={`${url}/manageProduct`}
                 className="block text-sm  px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
               >
                 <i className="fas fa-tools"></i> Manage All Product
               </Link>
-            </li>
+            </li>}
 
             <li className="pl-12">
               <Link
