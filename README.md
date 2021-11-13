@@ -1,7 +1,25 @@
 # Getting Started with Create React App
+
 visit  : https://cycle-shop-62d0c.web.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+how to make this site : 
+
+* Use react for front-end
+* use react tailwind for responsive 
+* use react router for routing page
+* use firebase for authentication
+* use EXPRESS, MONGODB database
+* which we provide pages are:
+  * home
+  * about
+  * cycles
+  * dashboard
+  * contact
+  * manage orders
+  * manage products
+* Some modifaciton coming soon...
+
+
 
 ## Available Scripts
 
