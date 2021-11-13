@@ -31,6 +31,13 @@ const AddProduct = () => {
             />
             <input
               className="text-lg mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="made"
+              type="text"
+              placeholder="made"
+              name="made"
+            />
+            <input
+              className="text-lg mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="rating"
               type="number"
               max="5" min="1"

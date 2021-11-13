@@ -34,25 +34,25 @@ const Carousel = () => {
       >
         <SwiperSlide className="swiper-slide">
           <div className="p-4 text-center  bg-white w-full mx-auto">
-            <div class="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
+            <div className="testimonial p-6 border-2 border-solid flex hover:border-green-400  transition-colors duration-300">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
                   alt=""
-                  class="w-full h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <p class="text-gray-600">
+                <p className="text-gray-600">
                   "Needless to say we are extremely satisfied with the results.
                   Keep up the excellent work. Your company is truly upstanding
                   and is behind its product 100%. Thanks guys, keep up the good
                   work!"
                 </p>
-                <div class="text-gray-900 font-bold uppercase mt-6">
+                <div className="text-gray-900 font-bold uppercase mt-6">
                   - jony dfs.
                 </div>
-                <div class="text-gray-600">Microsoft</div>
+                <div className="text-gray-600">Microsoft</div>
               </div>
             </div>
           </div>
@@ -60,25 +60,25 @@ const Carousel = () => {
 
         <SwiperSlide className="swiper-slide">
           <div className="p-4 text-center  bg-white w-full mx-auto">
-            <div class="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
+            <div className="testimonial p-6 border-2 border-solid flex hover:border-green-400  transition-colors duration-300">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
                   alt=""
-                  class="w-full h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <p class="text-gray-600">
+                <p className="text-gray-600">
                   "Needless to say we are extremely satisfied with the results.
                   Keep up the excellent work. Your company is truly upstanding
                   and is behind its product 100%. Thanks guys, keep up the good
                   work!"
                 </p>
-                <div class="text-gray-900 font-bold uppercase mt-6">
+                <div className="text-gray-900 font-bold uppercase mt-6">
                   - Annabell M.
                 </div>
-                <div class="text-gray-600">Microsoft</div>
+                <div className="text-gray-600">Microsoft</div>
               </div>
             </div>
           </div>
@@ -86,25 +86,25 @@ const Carousel = () => {
 
         <SwiperSlide className="swiper-slide">
           <div className="p-4 text-center  bg-white w-full mx-auto">
-            <div class="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
+            <div className="testimonial p-6 border-2 border-solid flex hover:border-green-400  transition-colors duration-300">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80"
                   alt=""
-                  class="w-full h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <p class="text-gray-600">
+                <p className="text-gray-600">
                   "Needless to say we are extremely satisfied with the results.
                   Keep up the excellent work. Your company is truly upstanding
                   and is behind its product 100%. Thanks guys, keep up the good
                   work!"
                 </p>
-                <div class="text-gray-900 font-bold uppercase mt-6">
+                <div className="text-gray-900 font-bold uppercase mt-6">
                   - lkwerowe M.
                 </div>
-                <div class="text-gray-600">Microsoft</div>
+                <div className="text-gray-600">Microsoft</div>
               </div>
             </div>
           </div>

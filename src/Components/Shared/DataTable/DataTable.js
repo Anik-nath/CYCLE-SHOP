@@ -20,12 +20,12 @@ const DataTable = (props) => {
         <td className="px-6 py-4 text-sm text-gray-500">{date}</td>
         <td className="px-6 py-4">
           <button className="px-4 py-1 text-sm text-white bg-green-500 rounded">
-            <i class="far fa-edit"></i>
+            <i className="far fa-edit"></i>
           </button>
         </td>
         <td className="px-6 py-4">
           <button className="px-4 py-1 text-sm text-white bg-red-400 rounded">
-            <i class="fas fa-trash-alt"></i>
+            <i className="fas fa-trash-alt"></i>
           </button>
         </td>
       </tr>
