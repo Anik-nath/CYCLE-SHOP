@@ -90,14 +90,14 @@ const Dashboard = () => {
               </Link>
             </li>}
 
-            <li className="pl-12">
+           {admin && <li className="pl-12">
               <Link
                 to={`${url}/addProduct`}
                 className="block text-sm  px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
               >
                 <i className="fas fa-plus"></i> Add product
               </Link>
-            </li>
+            </li>}
             <li className="pl-12">
               <Link
                 to={`${url}/givenReview`}
