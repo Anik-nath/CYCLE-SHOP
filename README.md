@@ -4,7 +4,7 @@ visit site  : https://cycle-shop-62d0c.web.app/
 
 Feaures : 
 
-*People can order cycles and they can be viewed their order 
+* People can order cycles and they can be viewed their order 
 and manage all orders.
 * Anyone can authenticate by Google sign in or create his or 
 her account in this site.
