@@ -8,8 +8,9 @@ const OurCard = (props) => {
 
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 mx-auto p-2">
-      <div style={{width:"318px",height:"194px"}}>
+    <div className="w-full relative rounded shadow-lg bg-gray-50 mx-auto p-2">
+      <div className="absolute bg-green-500 text-white capitalize rounded-full rounded-b-none rounded-l-none top-0 left-0 px-3">new</div>
+      <div>
       <img
         className="w-full"
         src={img}

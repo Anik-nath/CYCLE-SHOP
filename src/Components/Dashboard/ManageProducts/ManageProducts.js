@@ -54,7 +54,7 @@ const ManageProducts = () => {
                   <h1>Price : {products.price}</h1>
                   <h1>From : {products.made}</h1>
                   <div className="flex gap-4 py-4">
-                    <button className="px-4 py-1 text-sm text-white bg-green-500 rounded">
+                    <button className="px-4 py-1 text-sm text-whitebg-green-500 rounded">
                       <i className="far fa-edit"></i> Edit
                     </button>
                     <button

@@ -11,19 +11,21 @@ const BestProduts = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div>
-      <h2 className="text-center text-2xl text-gray-600 font-semibold py-8 uppercase">
-        <span className="text-green-500">Featured</span> Products
-      </h2>
-        <div className="container max-w-6xl mx-auto px-4">
+    <div className="py-8">
+      <div className="text-center pb-12">
+            <h1 className="text-3xl font-semibold uppercase"> <span className="text-green-500">Featured</span> Products</h1>
+            <img className="mx-auto" src="https://i.ibb.co/vXRgmg3/seperator.png" alt="" />
+            <p className="w-3/4 mx-auto md:w-full text-gray-700 md:text-lg">We are grateful to have the support of the following sponsors this year</p>
+        </div>
+        <div className="container mx-auto px-4">
           {
             products.length === 0 ? ( 
               <div className="flex justify-center items-center">
                 <div className="animate-spin rounded-full h-28 w-28 border-t-2 border-b-2 border-green-500"></div>
               </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
-                  {products.slice(0, 6).map((products) => (
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  {products.slice(0, 4).map((products) => (
                     <OurCard products={products} key={products._id}>
                       {products.name}
                     </OurCard>

@@ -33,3 +33,23 @@
     transform: rotate(360deg);
   }
 }
+.primary-bg-color{
+  background: #fc1907;
+}
+/* page banner style */
+.head-banner {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.531)),url("https://i.postimg.cc/ydk13MCK/fsjdlfsldf.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-inner {
+  min-height: 220px;
+}
+
+.scroll-your-role:hover{
+  background-color: #06623b !important;
+}
+.myBlack-color{
+  background-color: #3b3b3b;
+}

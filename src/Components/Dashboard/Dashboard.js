@@ -109,7 +109,7 @@ const Dashboard = () => {
             <li className="pl-12">
               <button
                 onClick={logout}
-                className="py-2 my-4 px-6 text-left font-medium rounded-full bg-green-500 text-white transition duration-300"
+                className="py-2 my-4 px-6 text-left font-medium rounded-fullbg-green-500 text-white transition duration-300"
               >
                 Sign out
               </button>

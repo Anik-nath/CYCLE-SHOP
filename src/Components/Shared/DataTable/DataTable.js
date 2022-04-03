@@ -19,7 +19,7 @@ const DataTable = (props) => {
         </td>
         <td className="px-6 py-4 text-sm text-gray-500">{date}</td>
         <td className="px-6 py-4">
-          <button className="px-4 py-1 text-sm text-white bg-green-500 rounded">
+          <button className="px-4 py-1 text-sm text-whitebg-green-500 rounded">
             <i className="far fa-edit"></i>
           </button>
         </td>

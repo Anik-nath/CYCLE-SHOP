@@ -21,7 +21,7 @@ const Navigation = () => {
                 </NavLink>
               </div>
 
-              <div className="hidden md:flex items-center space-x-1">
+              <div className="hidden md:flex items-center space-x-4">
                 <NavLink
                   to="/home"
                   activeStyle={{
@@ -40,7 +40,7 @@ const Navigation = () => {
                   to="/products"
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
                 >
-                  Products
+                  Bicyles
                 </NavLink>
                 <NavLink
                   activeStyle={{
@@ -51,6 +51,16 @@ const Navigation = () => {
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
                 >
                   About
+                </NavLink>
+                <NavLink
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#10B981",
+                  }}
+                  to="/contact"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                >
+                  Contact
                 </NavLink>
 
                 <NavLink
@@ -95,7 +105,7 @@ const Navigation = () => {
               {user?.displayName ? (
                 <span>{user.displayName}</span>
               ) : (
-                <span>Username</span>
+                <span>Guest</span>
               )}
             </div>
 
@@ -127,7 +137,7 @@ const Navigation = () => {
               <li className="active">
                 <NavLink
                   to="/home"
-                  className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold"
+                  className="block text-sm px-2 py-4 text-whitebg-green-500 font-semibold"
                 >
                   Home
                 </NavLink>

@@ -11,10 +11,22 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="pt-24">
-      <h2 className="text-center text-3xl font-semibold py-8 uppercase">
+    <div className="pt-16">
+      <div className="head-banner mb-8">
+        <div className="container mx-auto">
+          <div className="banner-inner flex flex-col justify-center items-center">
+            <h1 className="banner-title font-bold text-3xl text-white">
+              <span className="uppercase">All Bicycles</span>
+            </h1>
+            <div className="text-white pt-1">
+            <a className="hover:text-green-500 cursor-pointer font-semibold" href="!">Home</a> / <span className="text-green-500 font-semibold">Bicycles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <h2 className="text-center text-3xl font-semibold py-8 uppercase">
         <span className="text-green-500">All</span> Products
-      </h2>
+      </h2> */}
   
       <div className="container max-w-6xl mx-auto px-4">
       {

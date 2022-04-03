@@ -82,6 +82,13 @@ const Purchase = () => {
             >
               <i className="fas fa-shopping-cart"></i> Add To Cart
             </button>
+            {/* checkout button */}
+            <button
+              className="border ml-2 border-green-500 mt-4 hover:bg-green-500 hover:text-white p-2 px-4 rounded"
+              type="button"
+            >
+              <i className="fas fa-shopping-cart"></i> Checkout Now
+            </button>
           </div>
         </div>
         <div className="md:w-1/2 my-8 md:my-0">

@@ -1,14 +1,15 @@
 import React from "react";
 import logoIcon from "../../../images/title.png";
+import paymentcard from "../../../images/paymentcard.png";
 
 const Footer = () => {
   return (
-    <div className="mt-14" style={{ backgroundColor: "#3b3b3b" }}>
+    <div className="myBlack-color">
       <footer className="body-font">
         <div
           className="
       container
-      px-5
+      px-2
       py-24
       mx-auto
       flex
@@ -19,7 +20,7 @@ const Footer = () => {
       border-b-2 border-green-600 
     "
         >
-          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+          <div className="md:w-64 w-full flex-shrink-0 md:px-0 px-5 text-left md:text-left">
             <a
               href="!"
               className="
@@ -28,27 +29,48 @@ const Footer = () => {
           font-medium
           items-center
           md:justify-start
-          justify-center
+          justify-left
           text-white
         "
             >
               <img src={logoIcon} alt="" />
-              <span className="ml-3 text-xl text-white">CYCLE SHOP BD</span>
+              <span className="ml-3 text-xl font-semibold text-white">CYCLE SHOP BD</span>
             </a>
-            <p className="mt-2 text-sm text-gray-400">
+            <p className="mt-2 text-sm text-gray-400 text-justify">
               This is the best cycle and trusted cycle shop in your area. Enjoy
-              your ride!
+              your ride!The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
             </p>
+            <div
+              className="
+          inline-flex
+          sm:ml-auto sm:mt-0
+          pt-4
+          justify-center
+          sm:justify-start
+        "
+            >
+              <a href="!" className="text-gray-400 ">
+                <i className="fab fa-facebook-f text-lg"></i>
+              </a>
+              <a href="!" className="ml-4 text-gray-400 ">
+                <i className="fab fa-twitter text-lg"></i>
+              </a>
+              <a href="!" className="ml-4 text-gray-400 ">
+                <i className="fab fa-linkedin-in text-lg"></i>
+              </a>
+              <a href="!" className="ml-4 text-gray-400 ">
+                <i className="fab fa-instagram text-lg"></i>
+              </a>
+            </div>
           </div>
           <div
-            className=" justify-between
+            className="justify-between
         flex-grow flex flex-wrap 
         md:pl-20
         -mb-10
         md:mt-0
         mt-10
         md:text-left
-        text-center
       "
           >
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -56,54 +78,27 @@ const Footer = () => {
                 className="
             text-white
             title-font
-            font-medium
+            font-semibold
+            uppercase
             tracking-widest
-            text-sm
-            mb-3
+            text-lg
+            mb-4 text-left
           "
               >
                 CATEGORIES
               </h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none mb-10 text-left">
                 <li className="text-gray-400 hover:text-gray-200">
-                  first link
+                  Your Order
+                </li>
+                <li className="text-gray-400 py-4 hover:text-gray-200">
+                  Payment
                 </li>
                 <li className="text-gray-400 hover:text-gray-200">
-                  Second Link
+                  Your Wishlist
                 </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Third Link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Fourth Link
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2
-                className="
-            title-font
-            font-medium
-            text-white
-            tracking-widest
-            text-sm
-            mb-3
-          "
-              >
-                USEFUL LINK
-              </h2>
-              <nav className="list-none mb-10">
-                <li className="text-gray-400 hover:text-gray-200">
-                  first link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Second Link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Third Link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Fourth Link
+                <li className="text-gray-400 pt-4 hover:text-gray-200">
+                  Login
                 </li>
               </nav>
             </div>
@@ -111,29 +106,60 @@ const Footer = () => {
               <h2
                 className="
             title-font
-            font-medium
+            font-semibold
+            uppercase
             text-white
             tracking-widest
-            text-sm
-            mb-3
+            text-lg
+            mb-4
+            text-left
           "
               >
-                DASHBOARD
+                Our Company
               </h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none mb-10 text-left">
                 <li className="text-gray-400 hover:text-gray-200">
-                  first link
+                Delivery
+                </li>
+                <li className="text-gray-400 hover:text-gray-200 py-4">
+                About us
+                </li>
+                <li className="text-gray-400 hover:text-gray-200 pb-4">
+                  Contact Us
                 </li>
                 <li className="text-gray-400 hover:text-gray-200">
-                  Second Link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Third Link
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
-                  Fourth Link
+                 Site Map
                 </li>
               </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2
+                className="
+            title-font
+            font-semibold
+            text-white
+            tracking-widest
+            text-lg
+            mb-4 uppercase
+            text-left
+          "
+              >
+                Contact
+              </h2>
+              <div className="mb-10 text-gray-400">
+                <div className="flex flex-row items-center gap-2 text-justify">
+                  <i className="fas fa-map-marker-alt text-green-500 text-lg"></i>
+                  <p>44 Shirley Ave, West Chicago, IL 60185 Angelo</p>
+                  </div>
+                <div className="py-4 flex flex-row items-center gap-2">
+                  <i className="fas fa-phone text-green-500 text-lg"></i>
+                  <p>0123 456 789</p>
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <i className="fas fa-envelope text-green-500 text-lg"></i>
+                  <p>cyclebd@gmail.com</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -145,8 +171,7 @@ const Footer = () => {
         mx-auto
         py-4
         px-5
-        flex flex-wrap flex-col
-        sm:flex-row
+        flex flex-row justify-between items-center
       "
           >
             <p className="text-gray-400 text-sm text-center sm:text-left">
@@ -155,31 +180,9 @@ const Footer = () => {
                 Cycle shop BD
               </a>
             </p>
-            <span
-              className="
-          inline-flex
-          sm:ml-auto sm:mt-0
-          mt-2
-          justify-center
-          sm:justify-start
-        "
-            >
-              <a href="!" className="text-gray-400 ">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="!" className="ml-3 text-gray-400 ">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="!" className="ml-3 text-gray-400 ">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="!" className="ml-3 text-gray-400 ">
-                <i className="fab fa-youtube"></i>
-              </a>
-              <a href="!" className="ml-3 text-gray-400 ">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </span>
+            <div>
+              <img className="md:w-full w-32 md:h-8 h-5" src={paymentcard} alt="" />
+            </div>
           </div>
         </div>
       </footer>

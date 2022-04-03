@@ -98,7 +98,7 @@ const Login = () => {
                 Create an account
               </Link>
             </div>
-            <span className="mb-6 text-gray-400 mb-1">----OR----</span>
+            <span className="mb-6 text-gray-400">----OR----</span>
             <button onClick={handleGoogle}
               className="flex items-center bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-8 rounded-full focus:outline-none focus:shadow-outline"
               type="button"

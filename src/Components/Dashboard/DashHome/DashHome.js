@@ -26,7 +26,7 @@ const DashHome = () => {
         <div className="overflow-hidden h-2 mb-4 text-md flex rounded bg-green-200">
           <div
             style={{ width: "70%" }}
-            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"
+            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-centerbg-green-500"
           ></div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const DashHome = () => {
         <div className="overflow-hidden h-2 mb-4 text-md flex rounded bg-green-200">
           <div
             style={{ width: "80%" }}
-            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"
+            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-centerbg-green-500"
           ></div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const DashHome = () => {
         <div className="overflow-hidden h-2 mb-4 text-md flex rounded bg-green-200">
           <div
             style={{ width: "90%" }}
-            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"
+            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-centerbg-green-500"
           ></div>
         </div>
       </div>
