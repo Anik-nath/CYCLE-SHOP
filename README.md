@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
-visit  : https://cycle-shop-62d0c.web.app/
+visit site  : https://cycle-shop-62d0c.web.app/
+
+Feaures : 
+
+* People can order cycles and they can be viewed their order 
+and manage all orders.
+* Anyone can authenticate by Google sign in or create his or 
+her account in this site.
+* If anyone already log in they can see dashboard and only 
+admin can give users role etc.
 
 how to make this site : 
 
@@ -21,17 +30,8 @@ how to make this site :
 
 
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
