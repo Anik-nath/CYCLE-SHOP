@@ -155,7 +155,7 @@ const Navigation = () => {
                   to="/products"
                   className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
                 >
-                  Products
+                  Bicyles
                 </NavLink>
               </li>
               <li>
