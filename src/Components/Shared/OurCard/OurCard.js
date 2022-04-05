@@ -19,7 +19,7 @@ const OurCard = (props) => {
         img: img,
     };
     // console.log(cart);
-    fetch("http://localhost:5000/cartList", {
+    fetch("https://blooming-dawn-18027.herokuapp.com/cartList", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const OurCard = (props) => {
 
   // //add to cart
   // const addToCart = async (name, rating, price, img) => {
-  //   axios.post("http://localhost:5000/cart", {
+  //   axios.post("https://blooming-dawn-18027.herokuapp.com/cart", {
   //       name: name,
   //       rating: rating,
   //       price: price,

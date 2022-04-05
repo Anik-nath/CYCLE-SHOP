@@ -19,7 +19,7 @@ const NewsLetter = () => {
         //    ...data,
            subscribedEmail : data?.email
        }
-       fetch("http://localhost:5000/subscribeEmail",{
+       fetch("https://blooming-dawn-18027.herokuapp.com/subscribeEmail",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",

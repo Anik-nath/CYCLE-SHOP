@@ -15,7 +15,7 @@ const Test = () => {
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      "http://localhost:5000/checkout",
+      "https://blooming-dawn-18027.herokuapp.com/checkout",
       { token, product }
     );
  
