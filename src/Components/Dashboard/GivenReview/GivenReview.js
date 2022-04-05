@@ -42,7 +42,7 @@ const GivenReview = () => {
 
   return (
     <div id="review" className="text-center pt-2">
-      <h2 className="text-2xl font-semibold text-green-500">Given a Review</h2>
+      <h2 className="text-2xl font-semibold text-green-500">Given Review</h2>
       <div className="flex flex-col items-center mt-14">
         <form onSubmit={handleOrder} className="mb-4 mr-6">
           <input
