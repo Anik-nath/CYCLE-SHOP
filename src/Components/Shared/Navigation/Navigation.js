@@ -62,8 +62,8 @@ const Navigation = () => {
                 >
                   Contact
                 </NavLink>
-
-                <NavLink
+                  {user?.email ? 
+                  <NavLink
                   activeStyle={{
                     fontWeight: "bold",
                     color: "#10B981",
@@ -72,7 +72,9 @@ const Navigation = () => {
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
                 >
                   Dashboard
-                </NavLink>
+                </NavLink> : ''
+                }
+                
               </div>
             </div>
 
@@ -158,14 +160,19 @@ const Navigation = () => {
                   Bicyles
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/dashboard"
-                  className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-                >
-                  Dashboard
-                </NavLink>
-              </li>
+
+             {
+               user?.email ? 
+               <li>
+               <NavLink
+                 to="/dashboard"
+                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+               >
+                 Dashboard
+               </NavLink>
+             </li> : ''
+             }
+
               <li>
                 {user?.email ? (
                   <button

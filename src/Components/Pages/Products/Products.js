@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import OurCard from "../../Shared/OurCard/OurCard";
 
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -9,6 +10,9 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+
+
 
   return (
     <div className="pt-16">
