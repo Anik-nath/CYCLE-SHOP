@@ -1,0 +1,71 @@
+[
+  {
+    "_id": 1,
+    "name": "Trek",
+    "rating": 4.5,
+    "price": 29.99,
+    "img": "https://i.ibb.co/tbbcp4d/about-3.jpg"
+  },
+  {
+    "_id": 2,
+    "name": "Hero",
+    "rating": 3.8,
+    "price": 19.99,
+    "img": "https://i.ibb.co/yhP5PDQ/about-2.jpg"
+  },
+  {
+    "_id": 3,
+    "name": "Cannondale",
+    "rating": 5.0,
+    "price": 49.99,
+    "img": "https://i.ibb.co/6YWQ0mx/about-1.jpg"
+  },
+  {
+    "_id": 4,
+    "name": "Hercules",
+    "rating": 4.2,
+    "price": 39.99,
+    "img": "https://i.ibb.co/yhP5PDQ/about-2.jpg"
+  },
+  {
+    "_id": 5,
+    "name": "Kona",
+    "rating": 4.0,
+    "price": 24.99,
+    "img": "https://i.ibb.co/vXRgmg3/seperator.png"
+  },
+  {
+    "_id": 6,
+    "name": "Specialized",
+    "rating": 4.7,
+    "price": 59.99,
+    "img": "https://i.ibb.co/tbbcp4d/about-3.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "Bsa",
+    "rating": 3.5,
+    "price": 14.99,
+    "img": "https://i.ibb.co/yhP5PDQ/about-2.jpg"
+  },
+  {
+    "_id": 8,
+    "name": "Firefox",
+    "rating": 4.8,
+    "price": 79.99,
+    "img": "https://i.ibb.co/6YWQ0mx/about-1.jpg"
+  },
+  {
+    "_id": 9,
+    "name": "Merida",
+    "rating": 3.9,
+    "price": 34.99,
+    "img": "https://i.ibb.co/cJSf8ZR/about-images.jpg"
+  },
+  {
+    "_id": 10,
+    "name": "Trek",
+    "price": 44.99,
+    "img": "https://i.ibb.co/vXRgmg3/seperator.png"
+  }
+]

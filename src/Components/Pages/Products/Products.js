@@ -4,9 +4,8 @@ import OurCard from "../../Shared/OurCard/OurCard";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch("https://blooming-dawn-18027.herokuapp.com/cycles")
+    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cycles")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

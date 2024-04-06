@@ -10,7 +10,7 @@ const Purchase = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const url = `https://blooming-dawn-18027.herokuapp.com/cycles/${cycleId}`;
+    const url = `https://cycling-server-153ll8upe-aniknath.vercel.app/cycles/${cycleId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDetails(data));
@@ -34,7 +34,7 @@ const Purchase = () => {
       date: new Date().toLocaleDateString(),
     };
     
-    fetch("https://blooming-dawn-18027.herokuapp.com/orders", {
+    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

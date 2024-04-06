@@ -4,9 +4,10 @@ import OurCard from "../../../Shared/OurCard/OurCard";
 
 const BestProduts = () => {
   const [products, setProducts] = useState([]);
-
+  
   useEffect(() => {
-    fetch("https://blooming-dawn-18027.herokuapp.com/cycles")
+    const url = "https://cycling-server-153ll8upe-aniknath.vercel.app/cycles";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

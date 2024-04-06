@@ -5,7 +5,7 @@ const Review = () => {
   const [review, setReviw] = useState([]);
 
   useEffect(() => {
-    fetch("https://blooming-dawn-18027.herokuapp.com/reviews")
+    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviw(data));
   }, []);

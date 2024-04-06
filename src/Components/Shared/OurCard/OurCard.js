@@ -19,7 +19,7 @@ const OurCard = (props) => {
         img: img,
     };
     // console.log(cart);
-    fetch("https://blooming-dawn-18027.herokuapp.com/cartList", {
+    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cartList", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

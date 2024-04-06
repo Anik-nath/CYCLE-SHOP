@@ -8,7 +8,7 @@ const OrderList = () => {
 
   useEffect(() => {
     fetch(
-      `https://blooming-dawn-18027.herokuapp.com/orders/?email=${user.email}`
+      `https://cycling-server-153ll8upe-aniknath.vercel.app/orders/?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setAllOrder(data));

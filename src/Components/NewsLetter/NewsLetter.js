@@ -19,7 +19,7 @@ const NewsLetter = () => {
         //    ...data,
            subscribedEmail : data?.email
        }
-       fetch("https://blooming-dawn-18027.herokuapp.com/subscribeEmail",{
+       fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/subscribeEmail",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",

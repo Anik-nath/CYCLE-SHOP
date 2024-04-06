@@ -24,7 +24,7 @@ const AddProduct = () => {
       details: data?.details,
     };
 
-    fetch("https://blooming-dawn-18027.herokuapp.com/cycles", {
+    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cycles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

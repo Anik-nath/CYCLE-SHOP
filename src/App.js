@@ -24,13 +24,19 @@ function App() {
         <BrowserRouter>
           <Navigation></Navigation>
           <ScrollTop
-  distance={600}
-  breakpoint={2000}
-  style={{ backgroundColor:"#f1f1f1",padding:"4px 4px",border:"1px solid #ccc", borderRadius:"50%", textTransform:"uppercase" }}
-  className="scroll-your-role z-10 border-0"
-  speed={500}
-  target={75}
-/>
+            distance={600}
+            breakpoint={2000}
+            style={{
+              backgroundColor: "#f1f1f1",
+              padding: "4px 4px",
+              border: "1px solid #ccc",
+              borderRadius: "50%",
+              textTransform: "uppercase",
+            }}
+            className="scroll-your-role z-10 border-0"
+            speed={500}
+            target={75}
+          />
           <Switch>
             <Route exact path="/">
               <Home></Home>
