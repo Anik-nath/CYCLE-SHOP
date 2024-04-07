@@ -7,7 +7,7 @@ const MakeAdmin = () => {
   const handleSubmit = (e) => {
       const user = {email}; 
 
-    fetch('https://cycling-server-153ll8upe-aniknath.vercel.app/users/admin',{
+    fetch('https://cycle-shop-api-server.onrender.com/users/admin',{
         method: 'PUT',
         headers : {
             'content-type': 'application/json'

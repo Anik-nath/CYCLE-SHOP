@@ -24,7 +24,7 @@ const AddProduct = () => {
       details: data?.details,
     };
 
-    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cycles", {
+    fetch("https://cycle-shop-api-server.onrender.com/cycles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -87,18 +87,26 @@ const Footer = () => {
               >
                 CATEGORIES
               </h2>
-              <nav className="list-none mb-10 text-left">
-                <li className="text-gray-400 hover:text-gray-200">
-                  Your Order
+              <nav className="list-none mb-10 text-left flex flex-col gap-4">
+                <li>
+                <a href="/dashboard/orderList" className="text-gray-400 hover:text-gray-200">
+                  Order List
+                </a>
                 </li>
-                <li className="text-gray-400 py-4 hover:text-gray-200">
+               <li>
+               <a href="/dashboard/pay" className="text-gray-400 py-4 hover:text-gray-200">
                   Payment
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
+                </a>
+               </li>
+                <li>
+                <a href="/wishlist" className="text-gray-400 hover:text-gray-200">
                   Your Wishlist
+                </a>
                 </li>
-                <li className="text-gray-400 pt-4 hover:text-gray-200">
+                <li>
+                <a href="/login" className="text-gray-400 pt-4 hover:text-gray-200">
                   Login
+                </a>
                 </li>
               </nav>
             </div>
@@ -111,25 +119,22 @@ const Footer = () => {
             text-white
             tracking-widest
             text-lg
-            mb-4
+            mb-0
             text-left
           "
               >
                 Our Company
               </h2>
-              <nav className="list-none mb-10 text-left">
-                <li className="text-gray-400 hover:text-gray-200">
-                Delivery
-                </li>
-                <li className="text-gray-400 hover:text-gray-200 py-4">
+              <nav className="list-none mb-10 text-left flex flex-col gap-1">
+                <a href="/about" className="text-gray-400 hover:text-gray-200 py-4">
                 About us
-                </li>
-                <li className="text-gray-400 hover:text-gray-200 pb-4">
+                </a>
+                <a href="/contact" className="text-gray-400 hover:text-gray-200 pb-4">
                   Contact Us
-                </li>
-                <li className="text-gray-400 hover:text-gray-200">
+                </a>
+                <a href="/site" className="text-gray-400 hover:text-gray-200">
                  Site Map
-                </li>
+                </a>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -149,7 +154,7 @@ const Footer = () => {
               <div className="mb-10 text-gray-400">
                 <div className="flex flex-row items-center gap-2 text-justify">
                   <i className="fas fa-map-marker-alt text-green-500 text-lg"></i>
-                  <p>44 Shirley Ave, West Chicago, IL 60185 Angelo</p>
+                  <p>44 New Avenue, Chittagong, Bangladesh</p>
                   </div>
                 <div className="py-4 flex flex-row items-center gap-2">
                   <i className="fas fa-phone text-green-500 text-lg"></i>

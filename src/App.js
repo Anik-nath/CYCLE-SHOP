@@ -16,6 +16,7 @@ import Navigation from "./Components/Shared/Navigation/Navigation";
 import Review from "./Components/Shared/Review/Review";
 import ScrollTop from "react-scrolltop-button";
 import Test from "./Components/Test/Test";
+import PageNotFound from "./Components/Pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
             </PrivateRoute>
             <Route path="/purchase/:cycleId">
               <Purchase></Purchase>
+            </Route>
+            <Route path="*">
+              <PageNotFound></PageNotFound>
             </Route>
           </Switch>
           <NewsLetter></NewsLetter>

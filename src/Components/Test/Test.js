@@ -15,7 +15,7 @@ const Test = () => {
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      "https://cycling-server-153ll8upe-aniknath.vercel.app/checkout",
+      "https://cycle-shop-api-server.onrender.com/checkout",
       { token, product }
     );
  

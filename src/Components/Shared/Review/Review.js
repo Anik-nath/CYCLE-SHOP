@@ -5,20 +5,13 @@ const Review = () => {
   const [review, setReviw] = useState([]);
 
   useEffect(() => {
-    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/reviews")
+    fetch("https://cycle-shop-api-server.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviw(data));
   }, []);
   return (
     <div>
       <div className="bg-gray-100">
-        {/* <div className="py-10 container mx-auto ">
-            <h1 className="text-center text-2xl font-semibold text-green-500 uppercase">Testimonials</h1>
-            <h1 className="text-center text-gray-600 text-2xl pb-2 ">What our client says</h1>
-            <div className="mb-8">
-            <Carousel></Carousel>
-            </div>
-        </div> */}
       </div>
       <div className="pt-8 bg-gray-50">
         <div className="container lg:mx-auto px-4">

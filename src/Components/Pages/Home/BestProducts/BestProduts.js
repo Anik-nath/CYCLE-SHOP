@@ -6,7 +6,7 @@ const BestProduts = () => {
   const [products, setProducts] = useState([]);
   
   useEffect(() => {
-    const url = "https://cycling-server-153ll8upe-aniknath.vercel.app/cycles";
+    const url = "https://cycle-shop-api-server.onrender.com/cycles";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));

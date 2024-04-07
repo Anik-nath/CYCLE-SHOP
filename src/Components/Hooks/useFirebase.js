@@ -54,7 +54,7 @@ const useFirebase = () => {
 
 
   useEffect(()=>{
-    fetch(`https://cycling-server-153ll8upe-aniknath.vercel.app/users/${user.email}`)
+    fetch(`https://cycle-shop-api-server.onrender.com/users/${user.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
   },[user.email])
@@ -97,7 +97,7 @@ const useFirebase = () => {
   
   const saveUser =(email,displayName,method)=>{
     const user = {email,displayName};
-    fetch('https://cycling-server-153ll8upe-aniknath.vercel.app/users/users',{
+    fetch('https://cycle-shop-api-server.onrender.com/users',{
       method :method,
       headers: {
         'Content-Type': 'application/json'

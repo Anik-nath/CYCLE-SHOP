@@ -5,7 +5,7 @@ import OurCard from "../../Shared/OurCard/OurCard";
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cycles")
+    fetch("https://cycle-shop-api-server.onrender.com/cycles")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -27,9 +27,6 @@ const Products = () => {
           </div>
         </div>
       </div>
-      {/* <h2 className="text-center text-3xl font-semibold py-8 uppercase">
-        <span className="text-green-500">All</span> Products
-      </h2> */}
   
       <div className="container max-w-6xl mx-auto px-4">
       {
@@ -38,7 +35,7 @@ const Products = () => {
         <div className="animate-spin rounded-full h-28 w-28 border-t-2 border-b-2 border-green-500"></div>
       </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 py-12">
           {products.map((products) => (
             <OurCard products={products} key={products._id}>
               {products.name}

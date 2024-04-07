@@ -19,7 +19,7 @@ const NewsLetter = () => {
         //    ...data,
            subscribedEmail : data?.email
        }
-       fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/subscribeEmail",{
+       fetch("https://cycle-shop-api-server.onrender.com/subscribeEmail",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",

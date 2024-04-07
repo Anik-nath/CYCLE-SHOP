@@ -4,7 +4,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/cycles")
+    fetch("https://cycle-shop-api-server.onrender.com/cycles")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -13,7 +13,7 @@ const ManageProducts = () => {
   const hanndleDelete = (id) => {
     const wantToDelete = window.confirm("Are sure you?");
     if (wantToDelete) {
-      const url = `https://cycling-server-153ll8upe-aniknath.vercel.app/cycles/${id}`;
+      const url = `https://cycle-shop-api-server.onrender.com/cycles/${id}`;
       fetch(url, {
         method: "DELETE",
         headers: {

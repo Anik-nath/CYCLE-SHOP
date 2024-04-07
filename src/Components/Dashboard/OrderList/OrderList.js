@@ -8,7 +8,7 @@ const OrderList = () => {
 
   useEffect(() => {
     fetch(
-      `https://cycling-server-153ll8upe-aniknath.vercel.app/orders/?email=${user.email}`
+      `https://cycle-shop-api-server.onrender.com/orders/?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setAllOrder(data));

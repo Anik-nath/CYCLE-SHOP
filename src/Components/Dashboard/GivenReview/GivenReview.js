@@ -23,7 +23,7 @@ const GivenReview = () => {
       feedback: data?.feedback,
     };
 
-    fetch("https://cycling-server-153ll8upe-aniknath.vercel.app/reviews", {
+    fetch("https://cycle-shop-api-server.onrender.com/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
