@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 visit site  : https://cycle-shop-62d0c.web.app/
+![Cycleshop preview](https://i.ibb.co/4stgXss/cycle.jpg)
 
 Feaures : 
 
