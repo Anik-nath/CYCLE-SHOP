@@ -180,7 +180,7 @@ const Footer = () => {
       "
           >
             <p className="text-gray-400 text-sm text-center sm:text-left">
-              © 2021 Copyright:
+              © 2024 Copyright:
               <a href="!" className="text-gray-400 ml-1" target="_blank">
                 Cycle shop BD
               </a>
